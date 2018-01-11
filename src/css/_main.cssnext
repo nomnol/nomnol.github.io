@@ -1,0 +1,8 @@
+.main {
+  border: var(--otl-blue);
+  padding: 20px;
+
+  &-header__title-head {
+    color: var(--green);
+  }
+}
