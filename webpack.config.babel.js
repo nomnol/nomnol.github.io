@@ -4,8 +4,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js'
   },
   module: {
     rules: [
@@ -40,11 +40,9 @@ module.exports = {
       },
     ]
   },
-  plugins: [new ExtractTextPlugin('index.css')],
+  plugins: [new ExtractTextPlugin('css/index.css')],
   devServer: {
-    host: 'localhost',
     port: 9000
   },
-  devtool: 'source-map',
-  stats: {colors: true}
+  devtool: 'source-map'
 }

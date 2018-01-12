@@ -6,8 +6,8 @@
   "author": "nomnol <goldenveizer@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server -w -d --hot --inline --devtool source-map --colors --config webpack.config.babel.js",
-    "prod": "webpack -p"
+    "dev": "webpack-dev-server --config webpack.config.babel.js",
+    "build": "webpack -p"
   },
   "dependencies": {
     "autoprefixer": "^7.2.4",
