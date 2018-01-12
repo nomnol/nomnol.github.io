@@ -2,4 +2,6 @@
   --otl-red: 1px solid red;
   --otl-blue: 1px dashed blue;
   --otl-yell: 2px dotted yellow;
+
+  --blue: #61b3ff;
 }

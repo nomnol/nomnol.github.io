@@ -42,7 +42,8 @@ module.exports = {
   },
   plugins: [new ExtractTextPlugin('css/index.css')],
   devServer: {
-    port: 9000
+    port: 9000,
+    open: true
   },
   devtool: 'source-map'
 }
