@@ -1,1 +1,4 @@
-console.log(2, 'EXTERNAL IS RUNNING!');
+alert(3 +
+  alert('asdf') +
+2);
+
