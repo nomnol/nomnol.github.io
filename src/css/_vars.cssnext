@@ -1,7 +1,8 @@
 :root {
   --otl-red: 1px solid red;
-  --otl-blue: 1px dashed blue;
+  --otl-blue: 1px solid blue;
   --otl-yell: 2px dotted yellow;
+  --otl-green: 2px dotted green;
 
   --blue: #61b3ff;
 }

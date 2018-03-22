@@ -1,5 +1,7 @@
 .main {
   padding: 20px;
+  outline: var(--otl-red);
+  height: 100%;
 
   &-header__title-head {
     color: var(--blue);

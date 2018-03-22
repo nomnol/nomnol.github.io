@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 200px 1fr;
+  min-height: 100%;
+
+  &__header {
+    outline: var(--otl-green);
+    grid-column: 1 / 3;
+  }
+
+  &__side-bar {
+    outline: var(--otl-red);
+  }
+
+  &__content {
+    outline: var(--otl-blue);
+  }
+}
