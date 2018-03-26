@@ -1,6 +1,5 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HotModuleReplacementPlugin from 'webpack/lib/HotModuleReplacementPlugin.js';
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
@@ -49,12 +48,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('css/index.css'),
-    new HotModuleReplacementPlugin()
   ],
   devServer: {
-    port: 9010,
-    hot: true,
-    open: true
+    port: 9010
   },
   devtool: 'source-map'
 }

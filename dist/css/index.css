@@ -23,7 +23,7 @@ body {
   }.grid__side-bar {
     outline: 1px solid red;
   }.grid__content {
-    outline: 1px solid blue;
+    outline: 1px solid red;
   }
 
 
