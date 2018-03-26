@@ -1,5 +1,6 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HotModuleReplacementPlugin from 'webpack/lib/HotModuleReplacementPlugin.js';
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
@@ -16,14 +17,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader'
-        })
+        use: 'css-loader'
       },
       {
         test: /\.cssnext$/,
-        use: ExtractTextPlugin.extract({
-          use: [
+        use: [
+            {
+              loader: 'style-loader'
+            },
             {
               loader: 'css-loader?sourceMap'
             },
@@ -42,15 +43,16 @@ module.exports = {
               }
             }
           ]
-        })
       },
     ]
   },
   plugins: [
     new ExtractTextPlugin('css/index.css'),
+    new HotModuleReplacementPlugin()
   ],
   devServer: {
-    port: 9010
+    port: 9010,
+    hot: true
   },
   devtool: 'source-map'
 }
