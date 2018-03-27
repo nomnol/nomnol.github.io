@@ -1,5 +1,6 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+@import "_reset.cssnext";
 @import "_vars.cssnext";
 @import "_global.cssnext";
 @import "_main.cssnext";

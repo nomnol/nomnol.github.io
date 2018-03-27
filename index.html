@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JSVV</title>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="dist/css/index.css">
 </head>
 <body>
 
@@ -11,11 +11,76 @@
 
   <section class="grid">
     <header class="grid__header">
-      HEADER
+      <span class="grid__cell-desc">HEADER</span>
       <h1 class="main-header"><b class="main-header__title-head">js </b>tasks from VV</h1>
     </header>
-    <aside class="grid__side-bar">SIDE-BAR</aside>
-    <div class="grid__content">CONTENT</div>
+    <section class="grid__main-content">
+      <article class="grid__main-content-item grid__inner-elastic grid__inner-elastic_left">
+        <span class="grid__cell-desc">article</span>
+        <blockqoute>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolores doloribus eaque fugiat harum iure neque, nihil officiis optio, quia quisquam similique soluta suscipit tempora veritatis. Delectus eius eveniet soluta.</blockqoute>
+      </article>
+
+      <aside class="grid__main-content-item grid__inner-fixed grid__inner-fixed_right">
+        <span class="grid__cell-desc">aside</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, doloremque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, doloremque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, doloremque!</p>
+      </aside>
+
+      <article class="grid__main-content-item grid__inner-elastic grid__inner-elastic_left">
+        <span class="grid__cell-desc">article</span>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet cumque ea omnis possimus voluptatibus? Illo magnam nihil optio. Esse?</li>
+          <li>Aliquid dolore enim molestiae nemo porro suscipit, tempore. At corporis delectus eum iusto laborum obcaecati sapiente similique sit ullam voluptatibus.</li>
+          <li>Ad animi eos fugiat ipsa nemo nesciunt numquam praesentium quod repudiandae sed. Adipisci commodi debitis magni minima suscipit, vel vero.</li>
+          <li>Beatae cum cupiditate ducimus, eos exercitationem incidunt nemo placeat rerum suscipit temporibus. Debitis deleniti ea, id magnam neque quas veritatis.</li>
+        </ul>
+      </article>
+
+      <article class="grid__main-content-item grid__inner-elastic grid__inner-elastic_right">
+        <span class="grid__cell-desc">article</span>
+        <ol>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Minus nulla quo veniam voluptas!</li>
+          <li>Explicabo magnam quasi qui quod.</li>
+          <li>Dignissimos dolores est exercitationem explicabo.</li>
+          <li>Eum minima molestiae odio quam.</li>
+        </ol>
+      </article>
+
+      <aside class="grid__main-content-item grid__inner-fixed grid__inner-fixed_left">
+        <span class="grid__cell-desc">aside</span>
+        <table>
+          <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+        </table>
+      </aside>
+
+      <article class="grid__main-content-item grid__inner-elastic grid__inner-elastic_right">
+        <span class="grid__cell-desc">article</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum explicabo inventore ipsam molestiae voluptates. Adipisci dolorum in labore odio ut!</p>
+        <p>Aut beatae, cupiditate distinctio dolor enim eum eveniet excepturi, explicabo hic itaque nam necessitatibus quaerat quasi qui, quibusdam ratione voluptatem!</p>
+      </article>
+    </section>
+    <footer class="grid__footer">
+      <span class="grid__cell-desc">FOOTER</span>
+    </footer>
   </section>
   <!--<script src="./src/js/custom.js" defer></script>-->
 
@@ -24,7 +89,7 @@
 
 
 
-<script src="js/bundle.js"></script>
+<script src="dist/js/bundle.js"></script>
 
 </body>
 </html>
