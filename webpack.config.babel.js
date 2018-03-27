@@ -22,27 +22,27 @@ module.exports = {
       {
         test: /\.cssnext$/,
         use: [
-            {
-              loader: 'style-loader'
-            },
-            {
-              loader: 'css-loader?sourceMap'
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                sourceMap: true,
-                plugins: (loader) => [
-                  require('postcss-import')({ root: loader.resourcePath }),
-                  require('postcss-apply')(),
-                  require('postcss-nested')(),
-                  require('postcss-url')(),
-                  require('postcss-cssnext')()
-                ]
-              }
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader?sourceMap'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              sourceMap: true,
+              plugins: (loader) => [
+                require('postcss-import')({root: loader.resourcePath}),
+                require('postcss-apply')(),
+                require('postcss-nested')(),
+                require('postcss-url')(),
+                require('postcss-cssnext')()
+              ]
             }
-          ]
+          }
+        ]
       },
     ]
   },
