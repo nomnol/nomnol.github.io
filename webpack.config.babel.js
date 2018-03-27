@@ -21,28 +21,7 @@ module.exports = {
       },
       {
         test: /\.cssnext$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader?sourceMap'
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: (loader) => [
-                require('postcss-import')({root: loader.resourcePath}),
-                require('postcss-apply')(),
-                require('postcss-nested')(),
-                require('postcss-url')(),
-                require('postcss-cssnext')()
-              ]
-            }
-          }
-        ]
+        use: checkEnv(process.env.NODE_ENV)
       },
     ]
   },
@@ -55,4 +34,30 @@ module.exports = {
     hot: true
   },
   devtool: 'source-map'
+}
+
+function checkEnv(env) {
+  if (env == 'development') {
+    return ['style-loader', 'css-loader?sourceMap', {
+      loader: 'postcss-loader',
+      options: {
+        config: {
+          path: 'postcss.config.js'
+        }
+      }
+    }
+    ]
+  } else {
+    return ExtractTextPlugin.extract({
+      use: ['css-loader?sourceMap', {
+        loader: 'postcss-loader',
+        options: {
+          config: {
+            path: 'postcss.config.js'
+          }
+        }
+      }
+      ]
+    })
+  }
 }
